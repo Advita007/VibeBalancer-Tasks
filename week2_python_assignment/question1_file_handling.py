@@ -1,0 +1,5 @@
+data = open("data.txt", "w")
+data.write("This is the first line\nThis is the second line.\nThis is the third line.\nThis is the fourth line.\nThis is the fifth line.\n")
+data.close()
+data_readable = open("data.txt", "r")
+print(data_readable.read())
