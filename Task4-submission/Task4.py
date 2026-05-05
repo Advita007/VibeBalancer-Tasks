@@ -25,9 +25,9 @@ def work(delay: Optional[int] = None):
     print(f"Request ended at: {end_time} with duration = {duration}",flush=True)
     return {"server":"1", "delay":str(delay),"status":"active"}
 
-# In the week 3 server, the requests run one after the other, as the server is synchronous. The total time taken is atleast 6s, as the second request always has to wait until the first one is completed. The server is blocking.
+# In the week 3 server, the requests run one after the other, as the server is synchronous. The total time taken is atleast 15s for 5 requests, as the second request always has to wait until the first one is completed. The server is blocking.
 
-url = "http://127.0.0.1:8001/work?delay=3"
+url = "http://127.0.0.1:8002/work?delay=3"
 start = time.perf_counter()
 for _ in range(5):
     response = requests.get(url)
